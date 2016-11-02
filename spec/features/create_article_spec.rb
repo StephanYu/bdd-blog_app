@@ -9,7 +9,7 @@ RSpec.feature 'Create Article' do
     fill_in 'Title', with: 'Test Article'
     fill_in 'Body', with: 'A test body'
     
-    click_button 'Submit'
+    click_button 'Create Article'
 
     expect(page).to have_content('Article has been created')
     expect(page.current_path).to eq(articles_path)
@@ -23,7 +23,7 @@ RSpec.feature 'Create Article' do
     fill_in 'Title', with: ''
     fill_in 'Body', with: ''
     
-    click_button 'Submit'
+    click_button 'Create Article'
 
     expect(page).to have_content('Article has not been created')
     expect(page).to have_content('Title can\'t be blank')
